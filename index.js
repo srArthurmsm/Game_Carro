@@ -19,7 +19,8 @@ let t6 = new Text()
 let t7 = new Text()
 let t8 = new Text()
 let showlevel = false
-cap = 10
+let cap = 10
+
 
 let level = 1
 let jogar = 3
@@ -36,7 +37,7 @@ document.addEventListener('keydown',(e)=>{
         carro.dir = -7
     }else if(e.key === 's'){
         carro.dir = 7
-    } else if((e.key === 'p') && ((jogar == 1) || (jogar == 3))){
+    } else if((e.key === 'i') && ((jogar == 1) || (jogar == 3))){
         if (jogar == 1){
             jogar = 3
         } else{
@@ -130,9 +131,7 @@ function desenha(){
         c2.des_car_img()
         c3.des_car_img()
         coin.des_coin_img()
-        t1.des_text('Pontos: ' + carro.pts,24,100,'yellow','13px Daydream')
-        t3.des_text('Vida: ' + carro.vida,24,60,'yellow','13px Daydream')
-        t7.des_text("Level: " + level,24, 140, 'yellow', '13px Daydream')
+        
         carro.des_car_img()
         if(level >= 2){
             c4.des_car_img()
@@ -140,6 +139,9 @@ function desenha(){
         if(level >= 3){
             c5.des_car_img()
         }
+        t1.des_text('Pontos: ' + carro.pts,24,100,'yellow','13px Daydream')
+        t3.des_text('Vida: ' + carro.vida,24,60,'yellow','13px Daydream')
+        t7.des_text("Level: " + level,24, 140, 'yellow', '13px Daydream')
         
     }else if (jogar == 0){
         crash.des_estrada_img()
@@ -153,11 +155,8 @@ function desenha(){
     }else if (jogar == 3){
         drive.des_estrada_img()
         t5.des_text('Drive',280,30,'yellow','23px Daydream')
-        t2.des_text('aperte (P) para Iniciar', 140, 480,'yellow','23px Daydream')
+        t2.des_text('aperte (i) para Iniciar', 140, 480,'yellow','23px Daydream')
     }
-    document.addEventListener('keydown', (e)=>{
-        
-    })
 }
 function atualiza(){
     if(jogar == 1){

@@ -1,7 +1,8 @@
+@font-face { font-family: 'Daydream'; src: url('Daydream.ttf'); } 
 body{
     margin: 0;
     background-color: rgb(128, 128, 128);
-    
+    font-family: 'Daydream';
 }
 canvas{
     margin:auto;
@@ -11,8 +12,22 @@ canvas{
     right: 0;
     top: 0;
     bottom: 0;
+    border-radius: 20px;
 }
-@font-face { font-family: 'Daydream'; src: url('Daydream.ttf'); } 
-p{
-    font-family: 'Daydream';
+
+#box{
+    background-color: cadetblue;
+    border-radius: 20px;
+    float: left;
+    margin-left: 20%;
+    margin-top: 50%;
+}
+#container{
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+}
+h1{
+    font-size: 12px;
 }

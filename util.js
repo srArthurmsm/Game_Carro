@@ -72,8 +72,8 @@ class Estrada extends Obj{
         img.src = this.a
         des.drawImage(img, this.x, this.y, this.w, this.h)
     }
-    mov_est(){
-        this.x += this.velocidadeEstrada * 2
+    mov_est(speed){
+        this.x += this.velocidadeEstrada * 3
         if(this.x >= 700){
             this.x = -700
         }
